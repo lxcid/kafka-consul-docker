@@ -18,7 +18,7 @@ if int(args.brokerid) <= 0:
 
 for attempt in range(4):
     try:
-        r = requests.get(f"http://{consul_http_addr}/v1/catalog/service/kafka-9092?tag=brokerid%3D{args.brokerid}")
+        r = requests.get(f"http://{consul_http_addr}/v1/catalog/service/kafka?tag=brokerid%3D{args.brokerid}")
         r.raise_for_status()
         res = r.json()
         if len(res) > 0:
