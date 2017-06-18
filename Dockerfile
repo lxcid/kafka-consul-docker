@@ -158,7 +158,7 @@ RUN set -x && \
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 COPY getZooKeeperConnect /usr/local/bin
-COPY getKafkaService /usr/local/bin
+COPY getAdvertisedListeners /usr/local/bin
 COPY server.properties.ctmpl /opt/kafka/config
 
 COPY docker-entrypoint.sh /usr/local/bin
